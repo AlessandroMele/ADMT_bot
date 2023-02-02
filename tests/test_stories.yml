@@ -1,0 +1,59 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: benvenuto
+  steps:
+  - user: |
+      ciao
+    intent: greet
+  - action: utter_greet
+
+- story: arrivederci
+  steps:
+  - user: |
+      arrivederci
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      sei un bot?
+    intent: bot_challenge
+  - action: utter_iamabot
+
+- story: consiglia film attore
+  steps:
+  - user: |
+      mi consigli un film di Keanu Reeves?
+    intent: consiglia_film_attore
+  - action: action_search_film_by_actor
+
+- story: consiglia film genere
+  steps:
+  - user: |
+      mi consigli un film comico?
+    intent: consiglia_film_genere
+  - action: action_search_film_by_genre
+
+- story: consiglia serie genere
+  steps:
+  - user: |
+      mi consigli una serie horror?
+    intent: consiglia_serie_genere
+  - action: action_search_serie_by_genre
+
+- story: ora al cinema
+  steps:
+  - user: |
+      cosa c'è ora al cinema?
+    intent: ora_al_cinema
+  - action: action_ora_al_cinema
+
+- story: informazioni film
+  steps:
+  - user: |
+      cosa sai dirmi del film Star Wars III?
+    intent: informazioni_film
+  - action: action_informazioni_film

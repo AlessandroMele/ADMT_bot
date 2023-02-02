@@ -1,0 +1,379 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - start
+    - /start
+    - ciao
+    - buonasera
+    - salve
+    - bella
+    - buon pomeriggio
+    - buongiorno
+    
+- intent: goodbye
+  examples: |
+    - arrivederci
+    - a dopo
+    - grazie
+    - alla prossima
+    - saluti
+
+- intent: bot_challenge
+  examples: |
+    - sei un bot?
+    - cosa sei?
+    - sei un umano?
+    - sei un'IA?
+    - sei un artificiale?
+    - con chi sto parlando?
+    - parlo con un umano?
+    - parlo con un bot?
+    - parlo con un computer?
+    - parlo con un pc?
+
+- intent: consiglia_film_attore
+  examples: |
+    - mi consigli un film con [Will Smith](actor)?
+    - mi consigli un film dove c'è [Brad Pitt](actor)?
+    - consigliami un film dove c'è [Angelina Jolie](actor)
+    - consigliami un film con [Christopher Waltz](actor)
+    - mi dai un idea su che film guardare in cui ci sia [Gary Oldman](actor)?
+    - mi dai un idea su che film guardare dove c'è [Jim Carrey](actor)?
+    - mi dai un idea su che film guardare con [Keanu Reeves](actor)?
+    - mi dici un film dove c'è [Morgan Freeman](actor)?
+    - mi dici un film con [Al Pacino](actor)?
+    - vorrei vedere un film dove c'è [Robert de Niro](actor)
+    - vorrei vedere un film con [Tom Holland](actor)
+
+- intent: consiglia_film_genere
+  examples: |
+    - mi consigli un film [horror](genre)?
+    - mi consigli un film [comico](genre)?
+    - consigliami un film [drammatico](genre)?
+    - mi dai un idea su che film [thriller](genre) guardare?
+    - mi dai un idea su che film guardare di genere [giallo](genre)?
+    - mi dici un film [animazione](genre)?
+    - mi dici un film di genere [commedia](genre)?
+    - vorrei vedere un film [fantasy](genre)
+    - vorrei vedere un film di genere [horror](genre)
+
+- intent: consiglia_serie_genere
+  examples: |
+    - mi consigli una serie [comica](genre)?
+    - mi consigli una serie di genere [horror](genre)?
+    - consigliami una serie [fantasy](genre)?
+    - consigliami una serie di genere [drammatico](genre)?
+    - mi dai un idea su che serie [fantascienza](genre) guardare?
+    - mi dai un idea su che serie guardare di genere [thriller](genre)?
+    - mi dici una serie [musical](genre)?
+    - mi dici una serie di genere [horror](genre)?
+    - vorrei vedere una serie [giallo](genre)
+    - vorrei vedere una serie di genere [Storico](genre)
+
+- intent: informazioni_film
+  examples: |
+    - mi dai informazioni sul film [avengers](film)?
+    - mi dai informazioni su [Rocky](film)?
+    - dammi informazioni su [Il cavaliere oscuro: il ritorno](film)?
+    - dammi informazioni sul film [Star Wars III](film)?
+    - dammi dai qualche informazione su [Avatar](film)?
+    - dammi dai qualche informazione sul film [ET: l'extraterrestre](film)?
+    - cosa sai dirmi del film [V per Vendetta](film)?
+    - cosa sai dirmi di [Matrix](film)?
+    - cosa sai di [La leggenda del pianista sull'oceano](film)?
+
+- intent: ora_al_cinema
+  examples: |
+    - che film ci sono ora al cinema?
+    - cosa c'è adesso al cinema?
+    - cosa c'è al cinema?
+    - che film si possono vedere adesso al cinema?
+    - che film si possono vedere al cinema?
+
+- synonym: serie
+  examples: |
+    - serie
+    - serie tv
+    - telefilm
+    - serietv
+
+
+- lookup: genre
+  examples: |
+    - Azione
+    - Avventura
+    - Animazione
+    - Commedia
+    - Crime
+    - Giallo
+    - Documentario
+    - Drammatico
+    - Family
+    - Fantasy
+    - Noire
+    - Storico
+    - Horror
+    - Musical
+    - Mistero
+    - Romantico
+    - Fantascienza
+    - Sportivo
+    - Thriller
+    - Guerra
+    - Western
+    - Comico
+
+- lookup: actor
+  examples: |
+    - Jack Nicholson
+    - Ralph Fiennes
+    - Daniel Day-Lewis
+    - Robert De Niro
+    - Al Pacino
+    - Dustin Hoffman
+    - Tom Hanks
+    - Brad Pitt
+    - Anthony Hopkins
+    - Marlon Brando
+    - Jeremy Irons
+    - Denzel Washington
+    - Gene Hackman
+    - Jeff Bridges
+    - Tim Robbins
+    - Henry Fonda
+    - William Hurt
+    - Kevin Costner
+    - Clint Eastwood
+    - Leonardo DiCaprio
+    - Mel Gibson
+    - Robert Duvall
+    - Samuel L. Jackson
+    - Tommy Lee Jones
+    - Kevin Spacey
+    - Nicolas Cage
+    - Kevin Kline
+    - Morgan Freeman
+    - Michael Caine
+    - Russell Crowe
+    - Bruce Willis
+    - Johnny Depp
+    - Ben Kingsley
+    - Steve McQueen
+    - Tom Cruise
+    - Heath Ledger
+    - Philip Seymour Hoffman
+    - John Malkovich
+    - Christian Bale
+    - Richard Dreyfuss
+    - Jason Robards
+    - Colin Firth
+    - George Clooney
+    - Edward Norton
+    - Sean Connery
+    - Yves Montand
+    - Richard Gere
+    - Gary Oldman
+    - Harrison Ford
+    - Matt Damon
+    - John Gielgud
+    - Joe Pesci
+    - Paul Newman
+    - Woody Harrelson
+    - John Hurt
+    - Sean Penn
+    - Christopher Walken
+    - Mickey Rourke
+    - Peter O'Toole
+    - Michael Douglas
+    - Willem Dafoe
+    - Charlton Heston
+    - Forest Whitaker
+    - James Coburn
+    - Liam Neeson
+    - Will Smith
+    - Robin Williams
+    - Keanu Reeves
+    - Harvey Keitel
+    - Michael Madsen
+    - Kevin Bacon
+    - Ed Harris
+    - Alain Delon
+    - Chris Cooper
+    - Gerard Depardieu
+    - Justin Theroux
+    - Nick Nolte
+    - Val Kilmer
+    - Joaquin Phoenix
+    - Jared Leto
+    - Laurence Fishburne
+    - Antonio Banderas
+    - John Travolta
+    - John Goodman
+    - Arnold Schwarzenegger
+    - Adrien Brody
+    - Michael Keaton
+    - Billy Bob Thornton
+    - Hugo Weaving
+    - Sam Shepard
+    - Jude Law
+    - Geoffrey Rush
+    - Roberto Benigni
+    - "Jargen Prochnow"
+    - Alec Baldwin
+    - Joseph Fiennes
+    - Sebastian Koch
+    - F. Murray Abraham
+    - Javier Bardem
+    - John Wayne
+    - Jake Gyllenhaal
+    - Haing S. Ngor
+    - Viggo Mortensen
+    - Christoph Waltz
+    - Benicio Del Toro
+    - Anthony Quinn
+    - John C. Reilly
+    - Dennis Hopper
+    - Martin Sheen
+    - Marcello Mastroianni
+    - Hugh Grant
+    - Peter Sellers
+    - Tony Chiu-Wai Leung
+    - Ray Liotta
+    - Daniel Craig
+    - Bill Murray
+    - John Cusack
+    - James Woods
+    - Shia LaBeouf
+    - Sidney Poitier
+    - Clive Owen
+    - Michael J. Fox
+    - William H. Macy
+    - John Cleese
+    - George C. Scott
+    - Bill Pullman
+    - Steve Buscemi
+    - Pierce Brosnan
+    - Donald Sutherland
+    - Woody Allen
+    - Ewan McGregor
+    - Tobey Maguire
+    - Andy Garcia
+    - Cuba Gooding Jr.
+    - Robert Downey Jr.
+    - Matthew Broderick
+    - Gary Sinise
+    - Robert Redford
+    - Kyle MacLachlan
+    - James Cromwell
+    - Colin Farrell
+    - Kiefer Sutherland
+    - Kirk Douglas
+    - Scott Glenn
+    - Josh Hartnett
+    - Matthew Modine
+    - Ian McKellen
+    - Ethan Hawke
+    - Christian Slater
+    - Jonathan Rhys Meyers
+    - Jim Caviezel
+    - Christopher Lambert
+    - Orlando Bloom
+    - Mark Ruffalo
+    - Hugh Jackman
+    - Christopher Lee
+    - Tom Berenger
+    - Tim Roth
+    - Peter Ustinov
+    - Patrick Stewart
+    - Sam Neill
+    - Michael York
+    - Brian Dennehy
+    - Tom Hulce
+    - Matt Dillon
+    - David Carradine
+    - Ryan O'Neal
+    - Kurt Russell
+    - Don Cheadle
+    - Aaron Eckhart
+    - Jim Carrey
+    - Eli Wallach
+    - James Purefoy
+    - Pete Postlethwaite
+    - William Baldwin
+    - Brian Cox
+    - Ben Affleck
+    - Emile Hirsch
+    - Richard Jenkins
+    - Elijah Wood
+    - Gabriel Byrne
+    - Dennis Quaid
+    - Roger Moore
+    - Jan Decleir
+    - Sylvester Stallone
+    - Don Johnson
+    - Gene Bervoets
+    - Harry Dean Stanton
+    - Jean Reno
+    - John Turturro
+    - Armin Mueller-Stahl
+    - Omar Sharif
+    - Charlie Sheen
+    - Eddie Murphy
+    - Charles Bronson
+    - Keith Carradine
+    - Danny Glover
+    - Timothy Dalton
+    - Vince Vaughn
+    - Vinnie Jones
+    - Vincent Cassel
+    - Jason Statham
+    - Mads Mikkelsen
+    - Edward James Olmos
+    - Keith David
+    - Ted Danson
+    - Michael Clarke Duncan
+    - Steve Martin
+    - Albert Finney
+    - Lee Van Cleef
+    - Jeff Goldblum
+    - Ciarin Hinds
+    - Stanley Tucci
+    - David Morse
+    - Brent Spiner
+    - Jamie Foxx
+    - Philip Baker Hall
+    - Jean-Paul Belmondo
+    - Graham Greene
+    - Roy Scheider
+    - Jon Voight
+    - Toshiro Mifune
+    - Eric Bana
+    - James Franco
+    - Jack Black
+    - Emilio Estevez
+    - Sean Bean
+    - Louis de Funcs
+    - Bourvil
+    - Lino Ventura
+    - Jack Lemmon
+    - Art Carney
+    - Peter Finch
+    - John Mills
+    - Ben Johnson
+    - Joel Grey
+    - George Burns
+    - Melvyn Douglas
+    - Timothy Hutton
+    - Eric Stoltz
+    - Louis Gossett Jr.
+    - Don Ameche
+    - Peter Fonda
+    - Leslie Nielsen
+    - Christopher Eccleston
+    - Vincent Price
+    - Philip Michael Thomas
+    - Dexter Fletcher
+    - Antonio Banderas
+    - Michael Fassbender
+    - Ryan Gosling

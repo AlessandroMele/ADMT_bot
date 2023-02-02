@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: Saluto
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Addio
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Consiglia film per attore
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: consiglia_film_attore
+  - action: action_search_film_by_actor
+
+- story: Consiglia film per genere
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: consiglia_film_genere
+  - action: action_search_film_by_genre
+
+- story: Consiglia serie per genere
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: consiglia_serie_genere
+  - action: action_search_serie_by_genre
+
+- story: ora al cinema
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ora_al_cinema
+  - action: action_ora_al_cinema
+
+- story: informazioni film
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: informazioni_film
+  - action: action_informazioni_film

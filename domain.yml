@@ -1,0 +1,49 @@
+version: "3.1"
+
+entities:
+  - actor
+  - genre
+  - film
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - consiglia_film_attore:
+      use_entities: 
+        - actor
+  - consiglia_film_genere:
+      use_entities: 
+        - genre
+  - consiglia_serie_genere:
+      use_entities: 
+        - genre
+  - ora_al_cinema
+  - informazioni_film:
+      use_entities: 
+        - film
+
+
+responses:
+  utter_goodbye:
+  - text: "Alla prossima!"
+
+  utter_please_rephrase:
+  - text: "Non ho capito, puoi spiegarti meglio?"
+
+  utter_iamabot:
+  - text: "Sono un chatbot sviluppato con il framework Rasa."
+
+  utter_greet:
+  - text: "Benvenuto, sono un bot che può darti consigliarti film/serie TV e dirti cosa c'è al cinema in questo momento."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_search_film_by_actor
+  - action_search_film_by_genre
+  - action_search_serie_by_genre
+  - action_ora_al_cinema
+  - action_informazioni_film
