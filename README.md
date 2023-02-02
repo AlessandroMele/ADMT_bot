@@ -18,7 +18,7 @@ Per installare Rasa è necessario eseguire da terminale:<br>
 `` pip install rasa``
 
 Dopodichè, per avviare il chatbot è necessario eseguire da terminale nella cartella di progetto:<br>
-``rasa run``
+``rasa train | rasa run``
 
 Per avviare ngrok, è necessario eseguire da terminale nella cartella di progetto:<br>
 `ngrok http 5005`
