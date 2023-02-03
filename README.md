@@ -2,10 +2,10 @@
 
 ADMTbot è un chatbot sviluppato con il framework Rasa.<br>
 Esso è in grado di:
-- consigliare film in base ad attore o un gener;
-- consigliare serie tv in base al genere;
-- darti informazioni su uno specifico film;
-- dirti cosa c'è in questo momento al cinema.
+- consigliare film specificando un attore o un genere;
+- consigliare serie tv specificando un genere;
+- fornire informazioni su un film specificando il titolo;
+- fornire informazioni sui primi cinque film presenti al cinema.
 
 # Configurazione
 
@@ -15,7 +15,7 @@ Requisiti:
 - ngrok.
 
 Per installare Rasa è necessario eseguire da terminale:<br>
-`` pip install rasa``
+``pip install rasa``
 
 Dopodichè, per avviare il chatbot è necessario eseguire da terminale nella cartella di progetto:<br>
 ``rasa train | rasa run``
