@@ -32,6 +32,7 @@ Copiare il *webhook_url* (parte evidenziata nell'immagine), come prefisso nella 
 <br><img src="images/credentials.png" width=50% height=20%><br>
 
 Per rendere disponibili le *actions*, è necessario eseguire in una nuova finestra del terminale:<br>
+``cd actions``
 ``rasa run actions``
 
 Dopodichè, cercando il proprio bot su Telegram è possibile iniziare a chattare.
